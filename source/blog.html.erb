@@ -2,6 +2,11 @@
 pageable: true
 per_page: 10
 ---
+<section class="blogroll">
+  <div class="lead">
+  <h1>Anthony Candaele's Blog</h1>
+  <p>I blog regularly about webdevelopment topics</p>
+  </div>
 <% if paginate && num_pages > 1 %>
   <p>Page <%= page_number %> of <%= num_pages %></p>
 
@@ -10,18 +15,24 @@ per_page: 10
   <% end %>
 <% end %>
 
-<ul>
   <% page_articles.each_with_index do |article, i| %>
-    <li>
-      <h3><%= link_to article.title, article %></h3>
-      <h5><%= article.date.strftime('%b %e') %></h5>
-      <p><%= article.body %></p>
-    </li>
+    <article>
+      <div class="date">
+        <time datetime="<%= article.date %>"><%= article.date.strftime('%b %e %Y') %></time>
+      </div>
+      <div class="summary">
+        <header>
+          <h1><%= link_to article.title, article %></h1>
+        </header>
+        <p><%= article.body %></p>
+      </div>
+    </article>
   <% end %>
-</ul>
 
 <% if paginate %>
   <% if next_page %>
     <p><%= link_to 'Next page', next_page %></p>
   <% end %>
 <% end %>
+
+</section>

@@ -1,0 +1,15 @@
+<% wrap_layout :layout do %>
+  <section class="blogpost">
+    <article>
+      <header>
+        <h1><%= current_article.title %></h1>
+      </header>
+      <footer>
+        <time datetime="<%= current_article.date %>"><%= current_article.date.strftime('%b %e %Y') %> by Anthony Candaele</time>      
+       <span class="social"><i class="fa fa-twitter-square"></i><a href="#">Share on Twitter</a></span>
+    </footer>
+      <%= yield %>
+    </article>
+  </section>
+<% end %> 
+

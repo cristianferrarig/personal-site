@@ -1,9 +1,9 @@
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
-$sans-serif: 'Oxygen', $helvetica;
-$serif: $georgia;
+$sans-serif: 'sans-serif';
+$serif: "ff-tisa-web-pro", $georgia;
 
-$base-font-family: $sans-serif;
+$base-font-family: $serif;
 $header-font-family: $base-font-family;
 
 // Sizes
@@ -21,6 +21,7 @@ $medium-gray: #999;
 $light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
+$green: #99cc33;
 $light-green: #E6EFC2;
 
 // Body Color
@@ -28,7 +29,7 @@ $base-body-color: white;
 
 //  Font Colors
 $base-font-color: $dark-gray;
-$base-accent-color: $blue;
+$base-accent-color: $green;
 
 //  Text Link Colors
 $base-link-color: $base-accent-color;
@@ -41,3 +42,5 @@ $base-border-color: $light-gray;
 $error-color: $light-red;
 $notice-color: $light-yellow;
 $success-color: $light-green;
+
+

@@ -1,7 +1,32 @@
-<nav>
-  <ul>
-    <li>
-      <%= link_to "Blog Title", "index.html", :class => 'blog-title' %>
-    </li>
-  </ul>
-</nav>
+<header class="navigation">
+  <div class="menu-wrapper">
+      <a class="logo" href="/home">Anthony <span class="green">Candaele</span></a></h1>
+    <p class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-bars"></i></p>
+    <div class="nav">
+      <ul id="navigation-menu">
+        <li><a href="/about">About</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</li>
+        <li class="social"><i class="fa fa-twitter-square"></i><a href="https://twitter.com/acandael">Follow Me</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<script>
+  $(function() {
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+
+    $(menuToggle).on('click', function(e) {
+      e.preventDefault();
+      menu.slideToggle(function(){
+        if(menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+  });
+</script>
+

@@ -1,29 +1,25 @@
-#main {
-  @include outer-container;
+*{
+  margin: 0;
+}
+html, body {
+  height: 100%;
 }
 
-ol {
-  font-size: 1em;
-  font-weight: 500;
 
-  li {
-    margin: .5em 0;
+// Flash Messages
 
-    span {
-      display: inline-block;
+div.message {
+  @include outer-container;
+  p { 
+    @include span-columns(12);
 
-      &:before {
-        content: '/';
-        margin: 0 .3em;
-      }
+    &.flash-error {
+      @extend %flash-error;
+    }
+
+    &.flash-success {
+      @extend %flash-success;
     }
   }
 }
 
-.large-column {
-  @include span-columns(8 of 12);
-}
-
-.small-column {
-  @include span-columns(4 of 12);
-}

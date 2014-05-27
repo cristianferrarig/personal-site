@@ -23,3 +23,7 @@ div.message {
   }
 }
 
+.error {
+  @extend %flash-error;
+}
+

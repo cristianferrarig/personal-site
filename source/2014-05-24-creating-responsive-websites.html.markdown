@@ -21,33 +21,34 @@ The reason I chose this framework over popular frameworks like Bootstrap or Foun
 
 So instead of implementing the grid layout into my html markup:
 
-    <div class=“row”>
-      <section>
-        <aside class=“col-md-3”>
-          …
-        </aside>
-        <article class=“col-md-9”>
-          ...
-        </article>
-      </section>
-    </div>
+
+      <div class=“row”>
+        <section>
+          <aside class=“col-md-3”>
+            …
+          </aside>
+          <article class=“col-md-9”>
+            ...
+          </article>
+        </section>
+      </div>
 
 
 
-Bourbon Neat lets me implement the grid layout through Css:
+bourbon Neat lets me implement the grid layout through Css:
 
-    section {
-      @include outer-container;
-      aside { @include span-columns(3); }
-      article { @include span-columns(9); }
-    }
+      section {
+        @include outer-container;
+        aside { @include span-columns(3); }
+        article { @include span-columns(9); }
+      }
 
 This makes my html markup stay clean and semantic:
 
-    <section>
-      <aside>What is it about?</aside>
-      <article>Neat is an open source semantic grid framework built on top of Sass and Bourbon…</article>
-    </section>
+      <section>
+        <aside>What is it about?</aside>
+        <article>Neat is an open source semantic grid framework built on top of Sass and Bourbon…</article>
+      </section>
 
 ##Using Sass##
 
@@ -92,17 +93,17 @@ the site's style. It also contains folders for custom mixins and extends for you
 
 For instance:
 
-    section {
-      @include linear-gradient(to top, red, orange);
-    }
+      section {
+        @include linear-gradient(to top, red, orange);
+      }
 
 compiles to:
 
-    section {
-      background-color: red;
-      background-image: -webkit-linear-gradient(bottom, red, orange);
-      background-image:         linear-gradient(to top, red, orange);
-    }
+      section {
+        background-color: red;
+        background-image: -webkit-linear-gradient(bottom, red, orange);
+        background-image:         linear-gradient(to top, red, orange);
+      }
 
 ##Using Media Query Mixins##
 
@@ -110,49 +111,49 @@ Also very handy since Sass 3.2 is the use of mixins for media queries. Instead o
 
 For instance, for the section element on the homepage I defined this style definitions for the desktop, with additional styles for mobile and tablet using media query mixins:
 
-    section.content {
-      @include outer-container;
-      margin-top: 30px;
-      /* media query mixin for mobile screens */
-       @include media($mobile) {
-        margin-top: 0px;
+      section.content {
+        @include outer-container;
+        margin-top: 30px;
+        /* media query mixin for mobile screens */
+         @include media($mobile) {
+          margin-top: 0px;
+        }
+        /* media query mixin for tablet-pc screens */
+        @include media($tablet) {
+          margin-top: em(5);
+        }
       }
-      /* media query mixin for tablet-pc screens */
-      @include media($tablet) {
-        margin-top: em(5);
-      }
-    }
 
     
 
 Sass happily translates this to:
 
-     section.content {
-      *zoom: 1;
-      max-width: 68em;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 30px; }
-      section.content:before, section.content:after {
-        content: " ";
-        display: table; }
-      section.content:after {
-        clear: both; }
-       @media screen and (max-width: 480px) {
-        section.content {
-          margin-top: 0px; } }
-      @media screen and (max-width: 768px) {
-        section.content {
-          margin-top: 0.3125em; } }
+       section.content {
+        *zoom: 1;
+        max-width: 68em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px; }
+        section.content:before, section.content:after {
+          content: " ";
+          display: table; }
+        section.content:after {
+          clear: both; }
+         @media screen and (max-width: 480px) {
+          section.content {
+            margin-top: 0px; } }
+        @media screen and (max-width: 768px) {
+          section.content {
+            margin-top: 0.3125em; } }
 
 
 ##Some IE8 issues##
 
 In the testing phase, it seemed that there where some issues with older browser. More precisely, IE8 had some layout problems. Seems this had to do with IE8 not understanding some CSS3 selectors. Luckily there’s a solution for this with the Javascript framework called [Selectivizr](http://selectivizr.com/). All you need to do is define, between conditional tags, a reference to the Selectivizr script:
 
-    <!--[if lte IE 8]>
-       <script type="text/javascript" src="selectivizr.js"></script>
-    <![endif]-->
+      <!--[if lte IE 8]>
+         <script type="text/javascript" src="selectivizr.js"></script>
+      <![endif]-->
 
 Selectivizr use jQuery, so make sure define a reference to jQuery before you reference the Selectivizr script.
 
@@ -160,7 +161,7 @@ Another issue I ran into was the html5 placeholder tag wich is not recognised by
 
 Using it is very easy, just reference the placeholder.js script and put this one line of jQuery in your page:
 
-    $('input, textarea’).placeholder();
+      $('input, textarea’).placeholder();
 
 
 ##Conclusion##

@@ -13,7 +13,7 @@ activate :blog do |blog|
   # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
   blog.layout = "blogpost"
-  # blog.summary_separator = /(READMORE)/
+  blog.summary_separator = /<!--more-->/
   # blog.summary_length = 250
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
@@ -71,6 +71,8 @@ page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change
 activate :livereload
 
+activate :syntax
+
 
 
 # Methods defined in the helpers block are available in templates
@@ -87,6 +89,9 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 set :build_dir, 'tmp'
+
+set :markdown_engine, :kramdown
+set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 # Build-specific configuration
 configure :build do

@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>Blog Title - creating responsive websites</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/highlight.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700'
+  rel='stylesheet' type='text/css'>
+      <script>
+
+  WebFontConfig = {
+    typekit: { id: 'gil5zwe' }
+  };
+
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+              '://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+  </script>
+
+
+  </head>
+  <body>
+      <header class="navigation">
+  <div class="menu-wrapper">
+      <a class="logo" href="/home">Anthony <span class="green">Candaele</span></a></h1>
+    <p class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-bars"></i></p>
+    <div class="nav">
+      <ul id="navigation-menu">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/portfolio.html">Portfolio</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</li>
+        <li class="social"><i class="fa fa-twitter-square"></i><a href="https://twitter.com/acandael">Follow Me</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<script>
+  $(function() {
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+
+    $(menuToggle).on('click', function(e) {
+      e.preventDefault();
+      menu.slideToggle(function(){
+        if(menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+  });
+</script>
+
+
+        <section class="blogpost">
+    <article>
+      <header>
+        <h1>creating responsive websites</h1>
+      </header>
+      <footer>
+        <time datetime="2014-05-24 19:25:00 UTC">May 24 2014 by Anthony Candaele</time>      
+       <span class="social"><i class="fa fa-twitter-square"></i><a href="#">Share on Twitter</a></span>
+    </footer>
+      <p>For my latest web project, a small retail website for a cosmetologist, I
+decided to use the semantic grid framework <a href="http://neat.bourbon.io/">Bourbon Neat</a>
+
+The brief for this website was that visitors should easily be able to order a beauty treatment provided by the cosmetologist. The website should be responsive and easy to use on a broad collection of devices like smartphones, tablet-pc’s, laptops and desktops.</p>
+
+<p>The end result of all this is a website that is easily consulted and used on smartphones, tablet-pc’s, laptops and desktops:</p>
+
+<p><img alt="My helpful screenshot" src="/images/all_devices.jpg" /></p>
+
+<h2 id="why-bourbon-neat">Why Bourbon Neat?</h2>
+
+<p>The reason I chose this framework over popular frameworks like Bootstrap or Foundation are that Neat is a semantic grid framework. This means that my html markup doesn’t get cluttered with non semantic div’s for defining the grid.</p>
+
+<p>So instead of implementing the grid layout into my html markup:</p>
+
+<pre class="highlight plaintext">  &lt;div class=“row”&gt;
+    &lt;section&gt;
+      &lt;aside class=“col-md-3”&gt;
+        …
+      &lt;/aside&gt;
+      &lt;article class=“col-md-9”&gt;
+        ...
+      &lt;/article&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>bourbon Neat lets me implement the grid layout through Css:</p>
+
+<pre class="highlight plaintext">  section {
+    @include outer-container;
+    aside { @include span-columns(3); }
+    article { @include span-columns(9); }
+  }
+</pre>
+
+<p>This makes my html markup stay clean and semantic:</p>
+
+<pre class="highlight plaintext">  &lt;section&gt;
+    &lt;aside&gt;What is it about?&lt;/aside&gt;
+    &lt;article&gt;Neat is an open source semantic grid framework built on top of Sass and Bourbon…&lt;/article&gt;
+  &lt;/section&gt;
+</pre>
+
+<h2 id="using-sass">Using Sass</h2>
+
+<p>Neat is a grid framework build upon Bourbon, a lightweight mixing library for Sass. So to use this frameworks, you have to be comfortable with Sass.</p>
+
+<p>As you may know, <a href="http://sass-lang.com/">Sass</a> stands for Syntactically Awesome Stylesheets, and is what we call a Css preprocessor and provides a syntax that allows the use of variables, nesting of styles, mixing and other cool stuff. Overal Sass stands for better management of your Css code. I won’t go into Sass here, but I can refer to this excellent blogpost by Dan Cederholm: <a href="http://alistapart.com/article/why-sass">Why Sass</a>.</p>
+
+<p>I didn’t have much difficulties getting used to the Sass language, but organising the file structure for my stylesheets was a bit overwhelming at first.</p>
+
+<p>After checking out this great resource: <a href="http://thesassway.com/beginner/how-to-structure-a-sass-project">how to structure a sass project</a>, I came up with this structure:</p>
+
+<pre class="highlight plaintext">  project
+  - stylesheets/
+    all.css
+    _all.scss
+    -- application/
+        _index.scss
+        _contact.scss
+        …
+    -- base/
+       _base.scss
+       _extensions.scss
+       _forms.scss
+       _typography.scss
+       _variables.scss
+    -- bitters/
+    -- bourbon/
+    -- neat/
+</pre>
+
+<p>the Sass code gets compiled into all.scss</p>
+
+<p>The applications folder contains a .scss file for every page in the project (eg. _index.scss, _contact.scss, …)</p>
+
+<p>The ‘base’ folder contains common variables for typography, colours, extensions, etc …</p>
+
+<p>The ‘bitters’ folder contains styles for all the basic elements used troughout
+the site’s style. It also contains folders for custom mixins and extends for your site as well.</p>
+
+<h2 id="using-bourbon-mixins">Using Bourbon mixins</h2>
+
+<p><a href="http://bourbon.io/">Bourbon</a>, is a mixing library for Sass and can be compared with <a href="http://compass-style.org/">Compass</a>, but is more simple and lightweight. Another advantage of Bourbon, is that it automatically compiles to updated vendor prefixes.</p>
+
+<p>For instance:</p>
+
+<pre class="highlight plaintext">  section {
+    @include linear-gradient(to top, red, orange);
+  }
+</pre>
+
+<p>compiles to:</p>
+
+<pre class="highlight plaintext">  section {
+    background-color: red;
+    background-image: -webkit-linear-gradient(bottom, red, orange);
+    background-image:         linear-gradient(to top, red, orange);
+  }
+</pre>
+
+<h2 id="using-media-query-mixins">Using Media Query Mixins</h2>
+
+<p>Also very handy since Sass 3.2 is the use of mixins for media queries. Instead of dumping all your styles in a single media query definition, you can now use media query mixins where you see fit.</p>
+
+<p>For instance, for the section element on the homepage I defined this style definitions for the desktop, with additional styles for mobile and tablet using media query mixins:</p>
+
+<pre class="highlight plaintext">  section.content {
+    @include outer-container;
+    margin-top: 30px;
+    /* media query mixin for mobile screens */
+     @include media($mobile) {
+      margin-top: 0px;
+    }
+    /* media query mixin for tablet-pc screens */
+    @include media($tablet) {
+      margin-top: em(5);
+    }
+  }
+</pre>
+
+<p>Sass happily translates this to:</p>
+
+<pre class="highlight plaintext">   section.content {
+    *zoom: 1;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px; }
+    section.content:before, section.content:after {
+      content: " ";
+      display: table; }
+    section.content:after {
+      clear: both; }
+     @media screen and (max-width: 480px) {
+      section.content {
+        margin-top: 0px; } }
+    @media screen and (max-width: 768px) {
+      section.content {
+        margin-top: 0.3125em; } }
+</pre>
+
+<h2 id="some-ie8-issues">Some IE8 issues</h2>
+
+<p>In the testing phase, it seemed that there where some issues with older browser. More precisely, IE8 had some layout problems. Seems this had to do with IE8 not understanding some CSS3 selectors. Luckily there’s a solution for this with the Javascript framework called <a href="http://selectivizr.com/">Selectivizr</a>. All you need to do is define, between conditional tags, a reference to the Selectivizr script:</p>
+
+<pre class="highlight plaintext">  &lt;!--[if lte IE 8]&gt;
+     &lt;script type="text/javascript" src="selectivizr.js"&gt;&lt;/script&gt;
+  &lt;![endif]--&gt;
+</pre>
+
+<p>Selectivizr use jQuery, so make sure define a reference to jQuery before you reference the Selectivizr script.</p>
+
+<p>Another issue I ran into was the html5 placeholder tag wich is not recognised by older browsers. There are some solutions for this. The one I use is the excellent <a href="https://github.com/mathiasbynens/jquery-placeholder">Html5 Placeholder jQuery Plugin</a> by Matthias Bynens </p>
+
+<p>Using it is very easy, just reference the placeholder.js script and put this one line of jQuery in your page:</p>
+
+<pre class="highlight plaintext">  $('input, textarea’).placeholder();
+</pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I’m a developer that likes to have control over his codebase. Having full control over what gets in to my code was a main motivation for choosing a lightweight framework like Bourbon Neat. Another reason for choosing this grid framework is that it’s a semantic grid framework resulting in clean semantic code, not polluted with numerous div elements just for defining the grid layout.</p>
+
+<p>I much encourage the reader to check out Bourbon Neat, which was developed by <a href="http://www.thoughtbot.com/">Thoughtbot</a>. Lately they added <a href="http://bitters.bourbon.io/">Bitters</a> (Scaffold styles, variables and structure for Bourbon projects) and <a href="http://refills.bourbon.io/">Refills</a> (prepackaged patterns and components, built on top of Bourbon, Bitters, and Neat).</p>
+
+
+    </article>
+  </section>
+
+      <footer class="footer-2">
+  <div class="footer-logo">
+    <a href="/">Anthony Candaele</a>
+  </div>
+    <ul>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Portfolio</a></li>
+      <li><a href="javascript:void(0)">Blog</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+    </ul>
+
+    <div class="footer-secondary-links">
+      <ul>
+        <li><a href="javascript:void(0)">All rights reserved</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="#"><i class="fa fa-twitter-square"></i></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+      </ul>
+    </div>
+</footer>
+
+
+  </body>
+</html>
+ 
+

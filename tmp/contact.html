@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>Blog Title</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/highlight.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700'
+  rel='stylesheet' type='text/css'>
+      <script>
+
+  WebFontConfig = {
+    typekit: { id: 'gil5zwe' }
+  };
+
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+              '://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+  </script>
+
+
+  </head>
+  <body>
+      <header class="navigation">
+  <div class="menu-wrapper">
+      <a class="logo" href="/home">Anthony <span class="green">Candaele</span></a></h1>
+    <p class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-bars"></i></p>
+    <div class="nav">
+      <ul id="navigation-menu">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/portfolio.html">Portfolio</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</li>
+        <li class="social"><i class="fa fa-twitter-square"></i><a href="https://twitter.com/acandael">Follow Me</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<script>
+  $(function() {
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+
+    $(menuToggle).on('click', function(e) {
+      e.preventDefault();
+      menu.slideToggle(function(){
+        if(menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+  });
+</script>
+
+
+      <section class="contact">
+  <div class="contactform">
+    <h1>Let's Talk About Your Website</h1>
+    <p>Use the form beneath to contact me. I'd love to hear about your web project and why you want to work with me. Let's get the conversation started.</p>
+    <form id="contactForm" action="http://getsimpleform.com/messages?form_api_token=609fa637ef934ef993372b72ed56d645" method="post">
+      <input type="text" name="fullname" placeholder="fullname" autofocus required />
+      <input type="email" name="email" placeholder="email" />
+      <br />
+      <p>Tell me about your project. What are the goals, who are your visitors. Are there any special features that the website should have?</p>
+     <textarea name="message" rows="4" cols="50"></textarea> 
+     <input type="submit" text="Submit">You will be contacted within the next 24hrs</input>
+    </form>
+  </div>
+  <aside>
+    <h2>Contact Information</h2>
+    <p>Anthony Candaele<br />
+    Smidsestraat 36<br />
+    9000 Ghent, Belgium</p>
+    <p>VAT BE0861.036.534</p>
+    <p><i class="fa fa-phone-square"></i><a href="tel:32498137260">+32 498 13 72 60</a></p>
+    <p><i class="fa fa-envelope"></i><a href="mailto:anthony.candaele@webmove.be">info@anthony.candaele.be</a></p>
+    <p><i class="fa fa-linkedin-square"></i><a href="#">connect with me on LinkedIn</a></p>
+  </aside>
+</section>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+<script>
+$("#contactForm").validate({
+  debug: true,
+
+  rules: {
+    // simple rule, converted to {required:true}
+    fullname: "required",
+    // compound rule
+    email: {
+      required: true,
+      email: true
+    }
+  },
+
+  invalidHandler: function(event, validator) {
+    // 'this' refers to the form
+    var errors = validator.numberOfInvalids();
+    if (errors) {
+      var message = errors == 1
+        ? 'You missed 1 field. It has been highlighted'
+        : 'You missed ' + errors + ' fields. They have been highlighted';
+      $("div.error span").html(message);
+      $("div.error").show();
+    } else {
+      $("div.error").hide();
+    }
+  },
+
+  submitHandler: function(form) {
+    // do other things for a valid form
+    form.submit();
+
+
+    
+  }
+});
+</script>
+
+      <footer class="footer-2">
+  <div class="footer-logo">
+    <a href="/">Anthony Candaele</a>
+  </div>
+    <ul>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Portfolio</a></li>
+      <li><a href="javascript:void(0)">Blog</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+    </ul>
+
+    <div class="footer-secondary-links">
+      <ul>
+        <li><a href="javascript:void(0)">All rights reserved</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="#"><i class="fa fa-twitter-square"></i></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+      </ul>
+    </div>
+</footer>
+
+
+  </body>
+</html>

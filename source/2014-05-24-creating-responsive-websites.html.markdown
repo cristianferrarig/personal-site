@@ -1,5 +1,5 @@
 ---
-title: creating responsive websites
+title: creating responsive websites with Bourbon Neat
 date: 2014-05-24 19:25 UTC
 author: "Anthony Candaele"
 tags: "responsive"

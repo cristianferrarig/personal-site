@@ -5,16 +5,16 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-05-24T19:25:00Z</updated>
+  <updated>2014-05-24T21:25:00+02:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
-    <title>creating responsive websites</title>
-    <link rel="alternate" href="http://blog.url.com/blog/2014/05/24/creating-responsive-websites.html"/>
-    <id>http://blog.url.com/blog/2014/05/24/creating-responsive-websites.html</id>
-    <published>2014-05-24T19:25:00Z</published>
-    <updated>2014-05-26T19:54:05+02:00</updated>
+    <title>creating responsive websites with Bourbon Neat</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2014/05/24/creating-responsive-websites-with-bourbon-neat.html"/>
+    <id>http://blog.url.com/blog/2014/05/24/creating-responsive-websites-with-bourbon-neat.html</id>
+    <published>2014-05-24T21:25:00+02:00</published>
+    <updated>2014-05-28T09:42:53+02:00</updated>
     <author>
       <name>Article Author</name>
     </author>

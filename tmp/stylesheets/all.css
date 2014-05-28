@@ -4,37 +4,36 @@ input[type="submit"] {
   border: 1px solid #719b1c;
   border-radius: 3px;
   box-shadow: inset 0 1px 0 0 #b5d477;
-  color: white;
+  color: #333333;
   display: inline-block;
-  font-size: 11px;
+  font-size: inherit;
   font-weight: bold;
   background-color: #99cc33;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #99cc33), color-stop(100%, #7aa81f));
   background-image: -webkit-linear-gradient(#99cc33, #7aa81f);
   background-image: linear-gradient(#99cc33, #7aa81f);
   padding: 7px 18px;
   text-decoration: none;
-  text-shadow: 0 1px 0 #668f14;
+  text-shadow: 0 1px 0 #a5dc38;
   background-clip: padding-box;
   -webkit-font-smoothing: antialiased;
   font-size: 1em;
   font-weight: bold;
   line-height: 1em; }
-  /* line 79, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_button.scss */
+  /* line 131, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_button.scss */
   button:hover:not(:disabled),
   input[type="submit"]:hover:not(:disabled) {
     box-shadow: inset 0 1px 0 0 #a1c94f;
     cursor: pointer;
     background-color: #88b332;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #88b332), color-stop(100%, #719a1d));
     background-image: -webkit-linear-gradient(#88b332, #719a1d);
     background-image: linear-gradient(#88b332, #719a1d); }
-  /* line 95, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_button.scss */
+  /* line 148, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_button.scss */
   button:active:not(:disabled),
-  input[type="submit"]:active:not(:disabled) {
+  input[type="submit"]:active:not(:disabled), button:focus:not(:disabled),
+  input[type="submit"]:focus:not(:disabled) {
     border: 1px solid #719b1c;
-    box-shadow: inset 0 0 8px 4px #678d1c, inset 0 0 8px 4px #678d1c, 0 1px 1px 0 #eeeeee; }
-  /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_button.scss */
+    box-shadow: inset 0 0 8px 4px #678d1c, inset 0 0 8px 4px #678d1c; }
+  /* line 51, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_button.scss */
   button:disabled,
   input[type="submit"]:disabled {
     opacity: 0.5;
@@ -310,7 +309,7 @@ div.message p.flash-success {
     div.message p.flash-success a:hover {
       color: black; }
 
-/* line 2, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_grid.scss */
+/* line 2, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_grid.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -326,16 +325,13 @@ html, body {
 
 /* line 11, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_layout.scss */
 div.message {
-  *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 18, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  div.message:before, div.message:after {
-    content: " ";
-    display: table; }
-  /* line 23, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 15, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
   div.message:after {
+    content: "";
+    display: table;
     clear: both; }
   /* line 13, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_layout.scss */
   div.message p {
@@ -343,7 +339,7 @@ div.message {
     display: block;
     margin-right: 2.35765%;
     width: 100%; }
-    /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+    /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
     div.message p:last-child {
       margin-right: 0; }
 
@@ -358,18 +354,15 @@ header.navigation {
   color: #999999; }
   /* line 19, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
   header.navigation .menu-wrapper {
-    *zoom: 1;
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     z-index: 9999; }
-    /* line 18, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-    header.navigation .menu-wrapper:before, header.navigation .menu-wrapper:after {
-      content: " ";
-      display: table; }
-    /* line 23, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+    /* line 15, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
     header.navigation .menu-wrapper:after {
+      content: "";
+      display: table;
       clear: both; }
   /* line 25, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
   header.navigation .logo {
@@ -531,18 +524,15 @@ header.navigation {
 
 /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_index.scss */
 section.home {
-  *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   height: 400px; }
-  /* line 18, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  section.home:before, section.home:after {
-    content: " ";
-    display: table; }
-  /* line 23, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 15, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
   section.home:after {
+    content: "";
+    display: table;
     clear: both; }
   @media screen and (min-width: 53.75em) {
     /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_index.scss */
@@ -564,17 +554,14 @@ section.home {
 
 /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_about.scss */
 section.about {
-  *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.25em; }
-  /* line 18, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  section.about:before, section.about:after {
-    content: " ";
-    display: table; }
-  /* line 23, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 15, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
   section.about:after {
+    content: "";
+    display: table;
     clear: both; }
   @media screen and (min-width: 53.75em) {
     /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_about.scss */
@@ -593,7 +580,7 @@ section.about {
         margin-right: 2.35765%;
         width: 14.70196%;
         margin-left: 17.05961%; }
-        /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+        /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
         section.about aside:last-child {
           margin-right: 0; } }
     /* line 19, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_about.scss */
@@ -613,22 +600,19 @@ section.about {
         display: block;
         margin-right: 2.35765%;
         width: 65.88078%; }
-        /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+        /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
         section.about article:last-child {
           margin-right: 0; } }
 
 /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_portfolio.scss */
 section.portfolio {
-  *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 18, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  section.portfolio:before, section.portfolio:after {
-    content: " ";
-    display: table; }
-  /* line 23, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 15, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
   section.portfolio:after {
+    content: "";
+    display: table;
     clear: both; }
   @media screen and (min-width: 53.75em) {
     /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_portfolio.scss */
@@ -644,7 +628,7 @@ section.portfolio {
       width: 100%;
       margin-bottom: 40px;
       margin-top: 32px; }
-      /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
       section.portfolio article:last-child {
         margin-right: 0; } }
   /* line 18, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_portfolio.scss */
@@ -657,7 +641,7 @@ section.portfolio {
         display: block;
         margin-right: 2.35765%;
         width: 40.29137%; }
-        /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+        /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
         section.portfolio article div.screenshot:last-child {
           margin-right: 0; } }
     /* line 23, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_portfolio.scss */
@@ -676,7 +660,7 @@ section.portfolio {
         display: block;
         margin-right: 2.35765%;
         width: 57.35098%; }
-        /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+        /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
         section.portfolio article div.description:last-child {
           margin-right: 0; } }
     /* line 38, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_portfolio.scss */
@@ -719,7 +703,7 @@ div.lead {
       margin-left: 17.05961%;
       padding-bottom: 16px;
       margin-bottom: 32px; }
-      /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
       div.lead:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 53.75em) {
@@ -737,16 +721,13 @@ div.lead {
 
 /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_blog.scss */
 section.blogroll {
-  *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 18, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  section.blogroll:before, section.blogroll:after {
-    content: " ";
-    display: table; }
-  /* line 23, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 15, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
   section.blogroll:after {
+    content: "";
+    display: table;
     clear: both; }
   @media screen and (min-width: 53.75em) {
     /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_blog.scss */
@@ -765,7 +746,7 @@ section.blogroll {
       width: 82.94039%;
       margin-left: 17.05961%;
       margin-top: 16px; }
-      /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
       section.blogroll article:last-child {
         margin-right: 0; } }
   /* line 18, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_blog.scss */
@@ -780,7 +761,7 @@ section.blogroll {
         margin-right: 2.84259%;
         width: 17.72593%;
         padding-left: 0; }
-        /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+        /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
         section.blogroll article div.date:last-child {
           margin-right: 0; }
         /* line 23, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_blog.scss */
@@ -797,7 +778,7 @@ section.blogroll {
         margin-right: 2.84259%;
         width: 79.43148%;
         padding-left: 0; }
-        /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+        /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
         section.blogroll article div.summary:last-child {
           margin-right: 0; } }
     /* line 37, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_blog.scss */
@@ -828,7 +809,7 @@ div.lead {
       margin-right: 2.35765%;
       width: 65.88078%;
       margin-left: 17.05961%; }
-      /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
       div.lead:last-child {
         margin-right: 0; } }
   /* line 65, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_blog.scss */
@@ -848,16 +829,13 @@ div.lead {
 
 /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_blogpost.scss */
 section.blogpost {
-  *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 18, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  section.blogpost:before, section.blogpost:after {
-    content: " ";
-    display: table; }
-  /* line 23, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 15, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
   section.blogpost:after {
+    content: "";
+    display: table;
     clear: both; }
   @media screen and (min-width: 53.75em) {
     /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_blogpost.scss */
@@ -877,7 +855,7 @@ section.blogpost {
         margin-right: 2.35765%;
         width: 74.41059%;
         margin-left: 17.05961%; }
-        /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+        /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
         section.blogpost article:last-child {
           margin-right: 0; } }
     /* line 16, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_blogpost.scss */
@@ -928,17 +906,14 @@ section.blogpost {
 
 /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_contact.scss */
 section.contact {
-  *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.25em; }
-  /* line 18, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
-  section.contact:before, section.contact:after {
-    content: " ";
-    display: table; }
-  /* line 23, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 15, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
   section.contact:after {
+    content: "";
+    display: table;
     clear: both; }
   @media screen and (min-width: 53.75em) {
     /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_contact.scss */
@@ -958,7 +933,7 @@ section.contact {
         display: block;
         margin-right: 2.35765%;
         width: 57.35098%; }
-        /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+        /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
         section.contact div.contactform:last-child {
           margin-right: 0; } }
     /* line 18, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_contact.scss */
@@ -987,7 +962,7 @@ section.contact {
     margin-right: 2.35765%;
     width: 31.76157%;
     margin-left: 8.5298%; }
-    /* line 40, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+    /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
     section.contact aside:last-child {
       margin-right: 0; }
     /* line 45, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_contact.scss */

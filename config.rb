@@ -88,12 +88,13 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+#set :fonts_dir,  "fonts"
+
 set :build_dir, 'tmp'
 
 set :markdown_engine, :kramdown
 set :markdown, :fenced_code_blocks => true, :smartypants => true
 
-set :fonts_dir,  "fonts"
 
 # Build-specific configuration
 configure :build do

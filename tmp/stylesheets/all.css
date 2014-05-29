@@ -315,213 +315,6 @@ div.message p.flash-success {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_layout.scss */
-* {
-  margin: 0; }
-
-/* line 4, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_layout.scss */
-html, body {
-  height: 100%; }
-
-/* line 11, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_layout.scss */
-div.message {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  /* line 15, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
-  div.message:after {
-    content: "";
-    display: table;
-    clear: both; }
-  /* line 13, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_layout.scss */
-  div.message p {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
-    div.message p:last-child {
-      margin-right: 0; }
-
-/* line 2, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-header.navigation {
-  background-color: #333333;
-  border-bottom: 1px solid #1a1a1a;
-  font-family: "sans-serif";
-  width: 100%;
-  height: 60px;
-  z-index: 999;
-  color: #999999; }
-  /* line 19, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-  header.navigation .menu-wrapper {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    z-index: 9999; }
-    /* line 15, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
-    header.navigation .menu-wrapper:after {
-      content: "";
-      display: table;
-      clear: both; }
-  /* line 25, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-  header.navigation .logo {
-    float: left;
-    max-height: 60px;
-    font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-    padding-left: 8px;
-    font-size: 1.5em;
-    padding-top: .5em; }
-    @media screen and (min-width: 53.75em) {
-      /* line 25, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-      header.navigation .logo {
-        font-size: 2em; } }
-  /* line 37, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-  header.navigation .navigation-menu-button {
-    color: rgba(255, 255, 255, 0.7);
-    cursor: pointer;
-    display: block;
-    float: right;
-    font-family: "sans-serif";
-    font-weight: 700;
-    line-height: 60px;
-    margin: 0;
-    padding-right: 1em;
-    text-transform: uppercase; }
-    @media screen and (min-width: 53.75em) {
-      /* line 37, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-      header.navigation .navigation-menu-button {
-        display: none; } }
-    /* line 52, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-    header.navigation .navigation-menu-button i {
-      font-size: 1.5em; }
-  @media screen and (min-width: 53.75em) {
-    /* line 57, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-    header.navigation .nav {
-      float: right; } }
-  /* line 66, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-  header.navigation ul#navigation-menu {
-    clear: both;
-    -webkit-transform-style: preserve-3d;
-    display: none;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 0;
-    width: 100%;
-    z-index: 9999; }
-    @media screen and (min-width: 53.75em) {
-      /* line 66, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-      header.navigation ul#navigation-menu {
-        display: inline;
-        margin: 0;
-        padding: 0; } }
-  /* line 85, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-  header.navigation ul li {
-    background: #333333;
-    display: block;
-    line-height: 60px;
-    overflow: hidden;
-    width: 100%;
-    z-index: 9999;
-    padding-right: .8em;
-    text-align: right;
-    font-size: 1.5em;
-    font-weight: 400; }
-    @media screen and (min-width: 53.75em) {
-      /* line 85, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-      header.navigation ul li {
-        background: transparent;
-        display: inline;
-        line-height: 60px;
-        text-decoration: none;
-        padding-right: 2em;
-        width: auto; } }
-    /* line 105, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-    header.navigation ul li a {
-      font-weight: 400;
-      text-decoration: none;
-      color: rgba(255, 255, 255, 0.7);
-      font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; }
-      /* line 111, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-      header.navigation ul li a:hover {
-        color: white; }
-  /* line 119, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-  header.navigation .social a {
-    color: #99cc33; }
-  /* line 122, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
-  header.navigation .social i {
-    padding-right: .2em;
-    color: #99cc33; }
-
-/* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-.footer-2 {
-  background: #333333;
-  padding: 1.5em;
-  width: 100%;
-  overflow: hidden; }
-  /* line 12, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-  .footer-2 .footer-logo {
-    margin-right: 1em;
-    margin-bottom: 1em; }
-    @media screen and (min-width: 53.75em) {
-      /* line 12, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-      .footer-2 .footer-logo {
-        float: left;
-        margin-bottom: 0; } }
-  /* line 22, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-  .footer-2 ul {
-    margin-bottom: 1em; }
-    @media screen and (min-width: 53.75em) {
-      /* line 22, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-      .footer-2 ul {
-        float: left;
-        margin-left: 1em;
-        margin-bottom: 0; } }
-  /* line 31, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-  .footer-2 ul li {
-    padding-right: 1em;
-    font-weight: 800; }
-    @media screen and (min-width: 53.75em) {
-      /* line 31, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-      .footer-2 ul li {
-        display: inline;
-        text-align: left; } }
-  /* line 41, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-  .footer-2 ul li a {
-    color: rgba(255, 255, 255, 0.4); }
-    /* line 44, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-    .footer-2 ul li a:hover {
-      color: white; }
-  @media screen and (min-width: 53.75em) {
-    /* line 49, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-    .footer-2 .footer-secondary-links {
-      float: right; } }
-  /* line 54, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-  .footer-2 .footer-secondary-links li {
-    font-size: .8em;
-    font-weight: 400; }
-  /* line 59, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-  .footer-2 .footer-secondary-links ul.footer-social {
-    margin-top: 1em; }
-    @media screen and (min-width: 53.75em) {
-      /* line 59, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-      .footer-2 .footer-secondary-links ul.footer-social {
-        float: right;
-        margin-top: 0; } }
-    /* line 67, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-    .footer-2 .footer-secondary-links ul.footer-social li {
-      float: left;
-      font-size: 1em;
-      padding-right: .7em; }
-      /* line 72, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-      .footer-2 .footer-secondary-links ul.footer-social li:last-child {
-        padding-right: 0; }
-    /* line 77, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
-    .footer-2 .footer-secondary-links ul.footer-social i {
-      color: #99cc33;
-      font-size: 1.5em;
-      vertical-align: middle; }
-
 /*!
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
@@ -2389,6 +2182,213 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
 /* line 382, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/font-awesome-middleman-1.0.1/app/assets/stylesheets/_icons.scss */
 .icon-renren:before {
   content: "\f18b"; }
+
+/* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_layout.scss */
+* {
+  margin: 0; }
+
+/* line 4, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_layout.scss */
+html, body {
+  height: 100%; }
+
+/* line 11, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_layout.scss */
+div.message {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 15, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
+  div.message:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 13, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_layout.scss */
+  div.message p {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    /* line 38, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/neat-1.5.1/app/assets/stylesheets/grid/_span-columns.scss */
+    div.message p:last-child {
+      margin-right: 0; }
+
+/* line 2, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+header.navigation {
+  background-color: #333333;
+  border-bottom: 1px solid #1a1a1a;
+  font-family: "sans-serif";
+  width: 100%;
+  height: 60px;
+  z-index: 999;
+  color: #999999; }
+  /* line 19, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+  header.navigation .menu-wrapper {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 9999; }
+    /* line 15, /usr/local/rvm/gems/ruby-2.0.0-p247/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_clearfix.scss */
+    header.navigation .menu-wrapper:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 25, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+  header.navigation .logo {
+    float: left;
+    max-height: 60px;
+    font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+    padding-left: 8px;
+    font-size: 1.5em;
+    padding-top: .5em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 25, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+      header.navigation .logo {
+        font-size: 2em; } }
+  /* line 37, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+  header.navigation .navigation-menu-button {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-family: "sans-serif";
+    font-weight: 700;
+    line-height: 60px;
+    margin: 0;
+    padding-right: 1em;
+    text-transform: uppercase; }
+    @media screen and (min-width: 53.75em) {
+      /* line 37, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+      header.navigation .navigation-menu-button {
+        display: none; } }
+    /* line 52, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+    header.navigation .navigation-menu-button i {
+      font-size: 1.5em; }
+  @media screen and (min-width: 53.75em) {
+    /* line 57, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+    header.navigation .nav {
+      float: right; } }
+  /* line 66, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+  header.navigation ul#navigation-menu {
+    clear: both;
+    -webkit-transform-style: preserve-3d;
+    display: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    z-index: 9999; }
+    @media screen and (min-width: 53.75em) {
+      /* line 66, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+      header.navigation ul#navigation-menu {
+        display: inline;
+        margin: 0;
+        padding: 0; } }
+  /* line 85, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+  header.navigation ul li {
+    background: #333333;
+    display: block;
+    line-height: 60px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 9999;
+    padding-right: .8em;
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: 400; }
+    @media screen and (min-width: 53.75em) {
+      /* line 85, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+      header.navigation ul li {
+        background: transparent;
+        display: inline;
+        line-height: 60px;
+        text-decoration: none;
+        padding-right: 2em;
+        width: auto; } }
+    /* line 105, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+    header.navigation ul li a {
+      font-weight: 400;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.7);
+      font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; }
+      /* line 111, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+      header.navigation ul li a:hover {
+        color: white; }
+  /* line 119, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+  header.navigation .social a {
+    color: #99cc33; }
+  /* line 122, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_nav.scss */
+  header.navigation .social i {
+    padding-right: .2em;
+    color: #99cc33; }
+
+/* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+.footer-2 {
+  background: #333333;
+  padding: 1.5em;
+  width: 100%;
+  overflow: hidden; }
+  /* line 12, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+  .footer-2 .footer-logo {
+    margin-right: 1em;
+    margin-bottom: 1em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 12, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+      .footer-2 .footer-logo {
+        float: left;
+        margin-bottom: 0; } }
+  /* line 22, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+  .footer-2 ul {
+    margin-bottom: 1em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 22, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+      .footer-2 ul {
+        float: left;
+        margin-left: 1em;
+        margin-bottom: 0; } }
+  /* line 31, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+  .footer-2 ul li {
+    padding-right: 1em;
+    font-weight: 800; }
+    @media screen and (min-width: 53.75em) {
+      /* line 31, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+      .footer-2 ul li {
+        display: inline;
+        text-align: left; } }
+  /* line 41, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+  .footer-2 ul li a {
+    color: rgba(255, 255, 255, 0.4); }
+    /* line 44, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+    .footer-2 ul li a:hover {
+      color: white; }
+  @media screen and (min-width: 53.75em) {
+    /* line 49, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+    .footer-2 .footer-secondary-links {
+      float: right; } }
+  /* line 54, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+  .footer-2 .footer-secondary-links li {
+    font-size: .8em;
+    font-weight: 400; }
+  /* line 59, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+  .footer-2 .footer-secondary-links ul.footer-social {
+    margin-top: 1em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 59, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+      .footer-2 .footer-secondary-links ul.footer-social {
+        float: right;
+        margin-top: 0; } }
+    /* line 67, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+    .footer-2 .footer-secondary-links ul.footer-social li {
+      float: left;
+      font-size: 1em;
+      padding-right: .7em; }
+      /* line 72, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+      .footer-2 .footer-secondary-links ul.footer-social li:last-child {
+        padding-right: 0; }
+    /* line 77, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_footer.scss */
+    .footer-2 .footer-secondary-links ul.footer-social i {
+      color: #99cc33;
+      font-size: 1.5em;
+      vertical-align: middle; }
 
 /* line 1, /Users/acandael/Sites/my_blog/source/stylesheets/partials/_index.scss */
 section.home {

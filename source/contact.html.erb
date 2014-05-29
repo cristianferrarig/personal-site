@@ -2,8 +2,8 @@
   <div class="contactform">
     <h1>Let's Talk About Your Website</h1>
     <p>Use the form beneath to contact me. I'd love to hear about your web project and why you want to work with me. Let's get the conversation started.</p>
-    <form id="contactForm" action="http://getsimpleform.com/messages?form_api_token=609fa637ef934ef993372b72ed56d645" method="post">
-      <input type="text" name="fullname" placeholder="fullname" autofocus required />
+    <form id="contactForm" action="#">
+      <input  type="text" name="fullname" placeholder="fullname" autofocus required />
       <input type="email" name="email" placeholder="email" />
       <br />
       <p>Tell me about your project. What are the goals, who are your visitors. Are there any special features that the website should have?</p>
@@ -37,13 +37,19 @@ $("#contactForm").validate({
       email: true
     }
   },
+
   submitHandler: function(form) {
-    form.submit();
-    window.location.replace("/confirm.html");
+    $.ajax({
+      dataType: 'jsonp',
+      url: "http://getsimpleform.com/messages/ajax?form_api_token=609fa637ef934ef993372b72ed56d645",
+      data: $("#contactForm").serialize()
+    }).done(function() {
+      //callback which can be used to show a thank you message
+      //and reset the form
+      window.location.href = "/confirm.html";
+    });
   }
-
 });
-
 
 
 </script>

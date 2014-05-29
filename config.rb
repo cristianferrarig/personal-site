@@ -72,6 +72,7 @@ page "/feed.xml", layout: false
 activate :livereload
 
 activate :syntax
+activate :directory_indexes
 
 
 
@@ -93,7 +94,13 @@ set :images_dir, 'images'
 set :build_dir, 'tmp'
 
 set :markdown_engine, :kramdown
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+set :markdown, :layout_engine => :erb,
+               :fenced_code_blocks => true,
+               :tables => true,
+               :autolink => true,
+               :smartypants => true,
+               :with_toc_data => true
 
 
 # Build-specific configuration
